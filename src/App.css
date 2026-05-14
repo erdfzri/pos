@@ -1,0 +1,5 @@
+/* Base layout additions for unhandled routes */
+.p-8 {
+  padding: 2rem;
+  color: var(--text-primary);
+}

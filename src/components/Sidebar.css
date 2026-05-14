@@ -1,0 +1,141 @@
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: all 0.3s ease;
+  z-index: 10;
+  border-right: none;
+  border-top-right-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+}
+
+.sidebar-header {
+  padding: 2rem 1.75rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-container h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  overflow-y: auto;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.mt-6 { margin-top: 1.5rem; }
+
+.menu-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin-bottom: 0.2rem;
+  border: none;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.menu-item:hover {
+  color: var(--accent-color);
+  background-color: transparent;
+}
+
+.menu-item.active {
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: 0 4px 14px var(--accent-light);
+}
+
+.menu-item.active .menu-icon-wrapper {
+  color: white;
+}
+
+.sidebar-footer {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upgrade-card {
+  background-color: #1a1a2e;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  color: white;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.upgrade-icon {
+  background: rgba(255,255,255,0.1);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.upgrade-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.upgrade-card p {
+  font-size: 0.8rem;
+  color: #a0a0b8;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.btn-upgrade {
+  background-color: var(--accent-color);
+  color: white;
+  width: 100%;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  padding: 0.6rem;
+}
+.btn-upgrade:hover {
+  background-color: var(--accent-hover);
+}

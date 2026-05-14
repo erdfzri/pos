@@ -1,0 +1,155 @@
+/* Generic SaaS Table Styling that works for both Products and Transactions */
+
+.page-header-modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.table-toolbar {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table-search-box {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon-inline {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-secondary);
+}
+
+.table-search-input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.8rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-primary);
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.saas-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.saas-table th {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.saas-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.saas-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.saas-table tbody tr:hover {
+  background-color: var(--bg-primary);
+}
+
+.product-cell-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-cell-img {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.price-cell { color: var(--text-primary); }
+
+.action-buttons-cell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-action {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.icon-action.edit {
+  background-color: var(--accent-light);
+  color: var(--accent-color);
+}
+
+.icon-action.edit:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.icon-action.delete {
+  background-color: var(--danger-light);
+  color: var(--danger);
+}
+
+.icon-action.delete:hover {
+  background-color: var(--danger);
+  color: white;
+}
+
+.table-pagination {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-info {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.page-btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--radius-sm);
+}
