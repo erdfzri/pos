@@ -11,9 +11,11 @@ import (
 )
 
 type RegisterInput struct {
-	Username string `json:"username" binding:"required"`
-	Email    string `json:"email" binding:"required,email"`
-	Password string `json:"password" binding:"required,min=6"`
+	Username   string `json:"username" binding:"required"`
+	Email      string `json:"email" binding:"required,email"`
+	Password   string `json:"password" binding:"required,min=6"`
+	Role       string `json:"role" binding:"required"`
+	WarungName string `json:"warung_name"`
 }
 
 type LoginInput struct {
@@ -35,9 +37,11 @@ func Register(c *gin.Context) {
 	}
 
 	user := models.User{
-		Username: input.Username,
-		Email:    input.Email,
-		Password: string(hashedPassword),
+		Username:   input.Username,
+		Email:      input.Email,
+		Password:   string(hashedPassword),
+		Role:       input.Role,
+		WarungName: input.WarungName,
 	}
 
 	if err := config.DB.Create(&user).Error; err != nil {

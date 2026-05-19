@@ -15,7 +15,7 @@ func main() {
 	config.ConnectDatabase()
 
 	// Auto Migrate models
-	config.DB.AutoMigrate(&models.User{})
+	config.DB.AutoMigrate(&models.User{}, &models.Warung{})
 
 	// Initialize Gin
 	r := gin.Default()

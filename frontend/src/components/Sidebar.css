@@ -1,0 +1,476 @@
+/* Sidebar Premium Redesign Stylesheet */
+.sidebar {
+  width: 260px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  border-right: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+  position: relative;
+  flex-shrink: 0; /* Anti-compression magic bullet */
+}
+
+/* Collapsed Desktop State */
+.sidebar.collapsed {
+  width: 80px !important;
+  min-width: 80px !important;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #F1F5F9;
+  height: 72px;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon-glow {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+  border: 1px solid #BFDBFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.logo-icon {
+  color: #2563EB;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2563EB;
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  color: #0F172A;
+}
+
+/* Collapse Toggle Button (Floating Style) */
+.collapse-toggle-btn {
+  position: absolute;
+  right: -12px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748B;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  z-index: 105;
+}
+
+.collapse-toggle-btn:hover {
+  background: #2563EB;
+  color: #FFFFFF;
+  border-color: #2563EB;
+  transform: scale(1.1);
+}
+
+/* Mobile Close Button */
+.mobile-close-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  flex: 1;
+  padding: 1.5rem 0.75rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-section-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #94A3B8;
+  padding-left: 0.85rem;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Modernized Menu Items */
+.menu-item-modern {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0.85rem;
+  color: #64748B;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  gap: 0.85rem;
+}
+
+.menu-item-modern:hover {
+  color: #2563EB;
+  background: #EFF6FF;
+}
+
+.menu-icon-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.menu-item-modern:hover .menu-icon-inner {
+  transform: translateY(-1px);
+}
+
+/* Active State Styles (Linear & Stripe Inspired Blue Gradient) */
+.menu-item-modern.active {
+  background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+}
+
+.menu-item-modern.active .menu-icon-inner {
+  color: #FFFFFF;
+}
+
+/* Left Active Indicator Notch */
+.active-indicator {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 50%;
+  width: 4px;
+  background: #FFFFFF;
+  border-radius: 0 4px 4px 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.menu-item-modern.active .active-indicator {
+  opacity: 1;
+}
+
+/* Badges styling */
+.menu-badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.menu-badge.live {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+}
+
+.menu-badge.new {
+  background: rgba(245, 158, 11, 0.12);
+  color: #F59E0B;
+}
+
+/* Badges dot style for Collapsed Mode */
+.badge-dot {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1.5px solid #FFFFFF;
+}
+
+.badge-dot.live {
+  background: #10B981;
+}
+
+.badge-dot.new {
+  background: #F59E0B;
+}
+
+/* Collapsed specific alignment - Perfect symmetrical circles/squares */
+.sidebar.collapsed .sidebar-header {
+  padding: 1.5rem 0;
+  justify-content: center;
+}
+
+.sidebar.collapsed .logo-container {
+  justify-content: center;
+  width: 100%;
+}
+
+.sidebar.collapsed .logo-icon-glow {
+  width: 36px;
+  height: 36px;
+}
+
+.sidebar.collapsed .sidebar-menu {
+  padding: 1.5rem 0;
+  align-items: center;
+}
+
+.sidebar.collapsed .menu-section,
+.sidebar.collapsed .menu-nav {
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar.collapsed .menu-item-modern {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem 0;
+  border-radius: 10px;
+  gap: 0;
+  align-self: center;
+}
+
+.sidebar.collapsed .active-indicator {
+  display: none;
+}
+
+.sidebar.collapsed .collapse-toggle-btn {
+  /* Floating style on the border line matches expanded perfectly */
+  right: -12px;
+}
+
+.sidebar.collapsed .menu-section-title {
+  display: none;
+}
+
+/* Sidebar Footer (Profile Section) */
+.sidebar-profile-footer {
+  padding: 1rem 0.75rem;
+  border-top: 1px solid #F1F5F9;
+  background: #FAFBFC;
+}
+
+.profile-container-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+
+.profile-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1.5px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.profile-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-user-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0F172A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-user-role {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #94A3B8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-logout-btn {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-logout-btn:hover {
+  background: #FEE2E2;
+  color: #EF4444;
+}
+
+/* Collapsed profile state - Clean centered items */
+.sidebar.collapsed .sidebar-profile-footer {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar.collapsed .profile-container-inner {
+  justify-content: center;
+  padding: 0.5rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar.collapsed .profile-avatar {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+}
+
+.sidebar.collapsed .collapsed-logout {
+  width: 30px;
+  height: 30px;
+  margin: 0.5rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RESPONSIVE & MOBILE OVERLAYS */
+@media (max-width: 1024px) {
+  .sidebar {
+    position: fixed;
+    left: -270px;
+    top: 0;
+    height: 100vh;
+    box-shadow: 20px 0 40px rgba(0, 0, 0, 0.06);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .sidebar.mobile-open {
+    left: 0;
+  }
+
+  .mobile-close-btn {
+    display: block;
+    background: #F1F5F9;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .collapse-toggle-btn {
+    display: none;
+  }
+
+  .sidebar-mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 95;
+    animation: fadeIn 0.2s ease;
+  }
+}
+
+/* Dark mode compatibility */
+.dark .sidebar {
+  background: #1E293B;
+  border-color: #334155;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dark .sidebar-header {
+  border-color: #334155;
+}
+
+.dark .logo-icon-glow {
+  background: rgba(76, 95, 255, 0.15);
+  border-color: rgba(76, 95, 255, 0.25);
+}
+
+.dark .logo-text span {
+  color: #F8FAFC;
+}
+
+.dark .collapse-toggle-btn {
+  background: #1E293B;
+  border-color: #334155;
+  color: #94A3B8;
+}
+
+.dark .menu-item-modern:hover {
+  background: rgba(76, 95, 255, 0.12);
+  color: #3B82F6;
+}
+
+.dark .sidebar-profile-footer {
+  background: #1A2232;
+  border-color: #334155;
+}
+
+.dark .profile-user-name {
+  color: #F8FAFC;
+}
+
+.dark .profile-logout-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+}

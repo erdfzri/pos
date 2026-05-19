@@ -1,0 +1,609 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top left, #1a1c2c, #0f1016);
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.form-group input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: white;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.auth-button {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+}
+
+.auth-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.auth-footer a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   ADVANTURE MODERN MOCKUP LOGIN PAGE STYLES (CassaSmart Brand Redesign)
+   ========================================================================== */
+
+/* Full page wrapper with soft light-blue background and subtle circles */
+.advanture-auth-page {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #EFF6FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+/* Background circular decorations */
+.bg-deco {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.05);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-deco-1 {
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  right: -200px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+}
+
+.bg-deco-2 {
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  left: -150px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+}
+
+/* The card with rounded corners and shadow - Compact Version */
+.advanture-auth-card {
+  width: 100%;
+  max-width: 880px;
+  min-height: 510px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  display: flex;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+/* LEFT SIDE - BLUE GRADIENT THEME - Mockup Perfect Version */
+.advanture-auth-left {
+  flex: 1;
+  background: #3B5AF6;
+  /* Pure clean mockup blue */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 35px 40px;
+  color: #FFFFFF;
+}
+
+/* Logo Brand Container top-left - Transparent Full Logo */
+.left-logo-container-full-transparent {
+  position: absolute;
+  top: -10px;
+  /* Shifted down to prevent being too far up */
+  left: -50px;
+  /* Offset the left whitespace margin of the image asset */
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 20;
+}
+
+.left-logo-full-img {
+  height: 130px;
+  /* Massive image scale so the inner visual logo graphic displays extremely large and proud! */
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  /* Pure white brand logo for high contrast on blue banner! */
+}
+
+/* Background Circle Decos (Hollow Outlines) */
+.advanture-circle-deco-1 {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 24px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+  pointer-events: none;
+}
+
+.advanture-circle-deco-2 {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border: 14px solid rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  top: 90px;
+  left: -40px;
+  pointer-events: none;
+}
+
+/* Organic Blob bottom-left */
+.advanture-blob-deco {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.3) 0%, rgba(59, 130, 246, 0.05) 100%);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  bottom: -90px;
+  left: -70px;
+  filter: blur(15px);
+  pointer-events: none;
+}
+
+/* Wavy Lines middle-right */
+.advanture-wavy-lines-deco {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  right: 25px;
+  top: 40%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Dot Grid bottom-right */
+.advanture-dot-grid-deco {
+  position: absolute;
+  width: 96px;
+  height: 112px;
+  bottom: 25px;
+  right: 25px;
+  opacity: 0.18;
+  background-image: radial-gradient(circle, #FFFFFF 2px, transparent 2px);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+
+/* Typography styles matching screenshot exactly */
+.advanture-left-content {
+  position: relative;
+  z-index: 10;
+  max-width: 400px;
+  width: 100%;
+}
+
+.advanture-title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.advanture-subtitle {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* RIGHT SIDE - PURE WHITE FORM THEME - Compact Version */
+.advanture-auth-right {
+  flex: 1;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 40px;
+}
+
+.advanture-form-container {
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+
+/* Center Logo Icon Box - Elegant Large Monogram */
+.brand-icon-box-large {
+  width: 60px;
+  /* Larger box! */
+  height: 60px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.brand-icon-img-large {
+  width: 34px;
+  /* Larger monogram image! */
+  height: 34px;
+  object-fit: contain;
+}
+
+.advanture-right-greeting {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+
+/* Form inputs matching mockup exactly */
+.advanture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.advanture-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.advanture-input-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748B;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field-icon {
+  position: absolute;
+  left: 14px;
+  color: #94A3B8;
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 10px 14px 10px 42px;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 13.5px;
+  color: #1E293B;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+.input-with-icon input::placeholder {
+  color: #CBD5E1;
+}
+
+.input-with-icon input:focus {
+  outline: none;
+  border-color: #4D76FD;
+  box-shadow: 0 0 0 4px rgba(77, 118, 253, 0.12);
+}
+
+/* Custom error */
+.advanture-error-box {
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  color: #EF4444;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Checkbox and Reset password inline layout */
+.advanture-form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.remember-me-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748B;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.remember-me-label input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #4D76FD;
+  cursor: pointer;
+}
+
+.forgot-password-link {
+  color: #4D76FD;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* Submit Login Button */
+.advanture-submit-btn {
+  background: #4D76FD;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(77, 118, 253, 0.15);
+}
+
+.advanture-submit-btn:hover:not(:disabled) {
+  background: #3B5AF6;
+  box-shadow: 0 6px 14px rgba(59, 90, 246, 0.25);
+  transform: translateY(-1px);
+}
+
+.advanture-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.advanture-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* or separator */
+.social-separator {
+  margin: 12px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-separator::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #E2E8F0;
+  left: 0;
+  z-index: 1;
+}
+
+.social-separator span {
+  position: relative;
+  z-index: 10;
+  background: #FFFFFF;
+  padding: 0 12px;
+  color: #94A3B8;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Social Buttons row */
+.social-logins-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.social-btn {
+  width: 52px;
+  height: 38px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+}
+
+.social-btn:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+.social-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Footer bottom */
+.advanture-right-footer {
+  font-size: 12px;
+  color: #64748B;
+}
+
+.advanture-right-footer a {
+  color: #4D76FD;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.advanture-right-footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE LAYOUT FOR MOBILE & TABLETS */
+@media (max-width: 900px) {
+  .advanture-auth-card {
+    flex-direction: column;
+    max-width: 440px;
+    min-height: auto;
+  }
+
+  .advanture-auth-left {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .advanture-left-content {
+    max-width: 100%;
+  }
+
+  .advanture-title {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  .advanture-auth-right {
+    padding: 30px 20px;
+  }
+
+  /* Hide heavy graphic decorations on mobile */
+  .crescent-orbit,
+  .sphere-1,
+  .dot-grid,
+  .circle-1 {
+    display: none;
+  }
+}
